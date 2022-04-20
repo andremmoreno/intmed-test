@@ -13,3 +13,23 @@ Implementação de uma interface administrativa na qual gestor da clínica (supe
 - Lista de agendas disponíveis (GET /agendas/)
 - Marcar consulta (POST /consultas/)
 - Desmarcar consulta (DELETE /consultas/)
+
+## Instruções para entregar seu projeto:
+
+1. Clone o repositório
+- `git clone git@github.com:andremmoreno/intmed-test.git`.
+
+2. Entrar na pasta
+- `cd intmed-test`
+
+3. Crie o ambiente virtual para o projeto
+- `python3 -m venv .venv && source .venv/bin/activate`
+
+4. Instale as dependências
+- `python3 -m pip install -r dev-requirements.txt`
+
+4. Inicie o projeto
+- `python manage.py runserver` 
+
+
+
