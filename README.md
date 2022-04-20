@@ -14,7 +14,7 @@ Implementação de uma interface administrativa na qual gestor da clínica (supe
 - Marcar consulta (POST /consultas/)
 - Desmarcar consulta (DELETE /consultas/)
 
-## Instruções para entregar seu projeto:
+## Instruções do projeto:
 
 1. Clone o repositório
 - `git clone git@github.com:andremmoreno/intmed-test.git`.
