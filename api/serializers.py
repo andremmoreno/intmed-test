@@ -1,3 +1,4 @@
+from asyncore import read
 from rest_framework import serializers
 from api.models import Appointment, Doctor, Schedule, ScheduleHours
 
@@ -23,7 +24,10 @@ class ScheduleSerializer(serializers.ModelSerializer):
         fields = ['id', 'medico', 'dia', 'horarios']
 
 class AppointmentSerializer(serializers.ModelSerializer):
-    medico = DoctorSerializer()
     class Meta:
         model = Appointment
         fields = ['id', 'medico', 'dia', 'horario', 'data_agendamento']
+
+    def to_representation(self, instance):
+        self.fields['medico'] =  DoctorSerializer(read_only=True)
+        return super(AppointmentSerializer, self).to_representation(instance)

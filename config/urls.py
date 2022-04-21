@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from api.views import AppointmentView, DoctorView, ScheduleView
+from api.views import AppointmentDetailsView, AppointmentView, DoctorView, ScheduleView
 from rest_framework import routers
 from django.conf.urls import include
 
@@ -12,4 +12,5 @@ urlpatterns = [
     path('medicos/', DoctorView.as_view()),
     path('agendas/', ScheduleView.as_view()),
     path('consultas/', AppointmentView.as_view()),
+    path('consultas/<int:pk>/', AppointmentDetailsView.as_view()),
 ]
